@@ -1,0 +1,24 @@
+name: 🐛 Bug 报告 / ✨ 功能建议
+description: 游戏 bug、平衡性问题或新功能想法
+title: ""
+labels: []
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么 / 你想要什么
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 复现步骤 / 场景（结局截图、行业、地区、难度、月数）
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - Bug
+        - 平衡性
+        - 新功能
+        - 文案/翻译
