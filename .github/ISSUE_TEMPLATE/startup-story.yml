@@ -1,0 +1,55 @@
+name: 📖 投稿真实创业事件
+description: 像《硅谷》改编真实事迹一样，把你经历/见证的创业事件做成游戏事件
+title: "📖 事件投稿：<事件一句话标题>"
+labels: ["event-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢投稿！游戏事件库是本项目最宝贵的资产。
+        参考格式：事件描述 → 2~4 个选项 → 每个选项的后果 → 一条「创业课」。
+        优秀案例：`bad-cofounder-hire`（Netflix Keeper Test）、`cofounder-fight`（TS≠到账）。
+  - type: input
+    id: title
+    attributes:
+      label: 事件标题
+      placeholder: 例如：大客户说「先返点 5% 再签合同」
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: 事件描述（游戏内文案，100 字内，第二人称）
+      placeholder: 你正在和对方采购负责人吃饭。酒过三巡，他压低声音说……
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: 选项与后果（每行一个：选项 | 后果描述 | 数值影响建议）
+      placeholder: |
+        接受返点，先拿下订单 | 当月营收大涨，但尽调时被翻出 | cash+30, rep-20
+        严词拒绝 | 丢了这单，但团队士气大振 | rep+10, morale+5
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: 创业课（事件结尾的教训，50 字内）
+      placeholder: 先返点、高开票、代采返佣是经典的创业诈骗三件套，专杀缺现金的初创公司……
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 真实出处（公司/公开报道/个人经历，可模糊）
+      placeholder: 改编自 20xx 年 xx 公司 xx 事件 / 我的亲身经历
+    validations:
+      required: true
+  - type: checkboxes
+    id: license
+    attributes:
+      label: 授权
+      options:
+        - label: 我同意该事件以 MIT 协议贡献给本项目，并可署我的 GitHub ID
+          required: true
